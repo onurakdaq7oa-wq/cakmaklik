@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>RetractCase | Premium Kişiselleştirilebilir Çakmak Aparatı</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body class="text-zinc-100 min-h-screen flex flex-col justify-between overflow-x-hidden selection:bg-amber-500 selection:text-black">
+   <nav class="border-b border-zinc-800/60 bg-zinc-950/80 backdrop-blur-md sticky top-0 z-50">
+       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+           <div class="flex items-center space-x-3">
+               <div class="w-9 h-9 rounded-lg bg-white flex items-center justify-center text-zinc-950 shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+                   <i class="fa-solid fa-cube text-base animate-pulse"></i>
+               </div>
+               <div class="flex flex-col">
+                   <span class="text-lg font-black tracking-widest text-white leading-none">RETRACT<span class="text-zinc-500">LAB</span></span>
+                   <span class="text-[9px] tracking-wider text-amber-500 font-bold uppercase">PREMIUM CUSTOMS</span>
+               </div>
+           </div>
+           <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-zinc-400">
+               <a href="#" class="text-white border-b-2 border-white pb-1">Tasarım Stüdyosu</a>
+               <a href="#how" class="hover:text-white transition">Hakkımızda</a>
+               <a href="#how" class="hover:text-white transition">Nasıl Çalışır?</a>
+           </div>
+           <div class="flex items-center">
+               <button onclick="openCart()" class="relative p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 hover:text-white text-zinc-400 transition">
+                   <i class="fa-solid fa-bag-shopping text-lg"></i>
+                   <span id="cart-badge" class="absolute -top-1 -right-1 bg-amber-500 text-[9px] w-5 h-5 rounded-full flex items-center justify-center text-zinc-950 font-black shadow-md">0</span>
+               </button>
+           </div>
+       </div>
+   </nav>
+
+   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-12 w-full flex-grow grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+       <div class="lg:col-span-5 w-full lg:sticky lg:top-24 flex flex-col items-center">
+           <div class="w-full bg-zinc-900/40 rounded-3xl p-6 sm:p-10 border border-zinc-800/80 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] relative flex flex-col items-center justify-center min-h-[580px] backdrop-blur-sm overflow-hidden">
+               <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(24,24,27,0.5)_0%,rgba(9,9,11,1)_100%)]"></div>
+               <div id="studio-glow" class="absolute w-72 h-72 rounded-full bg-amber-500/10 blur-[90px] -z-10 transition-all duration-700 transform -translate-y-12"></div>
+               <div class="absolute top-4 left-4 flex items-center space-x-2 bg-zinc-950/90 px-3 py-1.5 rounded-full text-[10px] text-zinc-400 border border-zinc-800/80 z-30">
+                   <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-ping"></span>
+                   <span class="font-bold tracking-wider uppercase">FOTO-GERÇEKÇİ ÖNİZLEME</span>
+               </div>
+               <div class="relative flex flex-col items-center justify-center scale-110 z-20 mt-6 select-none transition-transform duration-500 hover:scale-[1.15]">
+                   <div class="relative w-28 h-14 flex justify-center -mb-3">
+                       <div class="w-14 h-16 border-[5px] border-zinc-400 rounded-t-[2.5rem] bg-transparent relative shadow-lg">
+                           <div class="absolute inset-0 border-[2px] border-white/20 rounded-t-[2.2rem]"></div>
+                           <div class="absolute right-0 top-3 w-1.5 h-7 bg-zinc-300 rounded-full transform rotate-12 shadow-sm border border-zinc-500"></div>
+                       </div>
+                   </div>
+                   <div class="w-32 h-32 rounded-full bg-gradient-to-br from-zinc-700 via-zinc-800 to-zinc-950 border-[6px] border-zinc-600/90 flex items-center justify-center shadow-[0_15px_30px_rgba(0,0,0,0.8)] relative overflow-hidden">
+                       <div class="absolute inset-0 rounded-full border-2 border-white/30 z-10 pointer-events-none metal-gloss"></div>
+                       <div class="w-24 h-24 rounded-full bg-zinc-950 flex items-center justify-center overflow-hidden relative shadow-inner">
+                           <div id="preview-logo-bg" class="absolute inset-0 opacity-20 bg-zinc-800" style="background-image: radial-gradient(circle, #fff 10%, transparent 11%), radial-gradient(circle, #fff 10%, transparent 11%); background-size: 8px 8px; background-position: 0 0, 4px 4px;"></div>
+                           <div id="preview-logo-wrapper" class="absolute inset-0 w-full h-full flex items-center justify-center p-1.5 transition-all duration-300">
+                               <img id="preview-logo-img" src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=300&auto=format&fit=crop&q=80" alt="Amblem" class="w-full h-full rounded-full object-cover shadow-md z-10">
+                           </div>
+                           <div class="absolute inset-0 dome-glass rounded-full z-20 pointer-events-none opacity-90"></div>
+                       </div>
+                   </div>
+                   <div class="w-3 h-10 bg-gradient-to-r from-zinc-800 via-zinc-400 to-zinc-800 relative flex flex-col justify-between items-center py-1 border-x border-zinc-700 shadow-md">
+                       <span class="w-1.5 h-1.5 rounded-full bg-zinc-950"></span>
+                       <span class="w-2 h-1 bg-zinc-600 rounded-full"></span>
+                   </div>
+                   <div class="relative">
+                       <div id="preview-case" class="w-[4.5rem] h-36 bg-amber-500 rounded-[1.5rem] p-3 flex flex-col items-center justify-between shadow-[0_15px_35px_rgba(0,0,0,0.7)] transition-all duration-500 border border-white/10 relative overflow-hidden">
+                           <div class="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-white/15 pointer-events-none"></div>
+                           <div id="preview-texture-layer" class="absolute inset-0 opacity-40 mix-blend-overlay transition-all duration-300 pointer-events-none"></div>
+                           <div class="w-12 h-3.5 bg-zinc-950/20 rounded-full mb-1 border-b border-white/5 flex items-center justify-center">
+                               <span class="w-4 h-0.5 bg-zinc-950/40 rounded-full"></span>
+                           </div>
+                           <div id="preview-case-text" class="text-[10px] font-black uppercase tracking-[0.25em] text-zinc-950 text-center drop-shadow-md select-none mix-blend-multiply opacity-80">FLAME</div>
+                           <div class="w-11 h-12 rounded-b-xl bg-gradient-to-b from-zinc-700 via-zinc-400 to-zinc-800 border-x border-b border-zinc-500 flex flex-col items-center justify-end pb-1.5 shadow-inner relative overflow-hidden">
+                               <div class="w-6 h-3 bg-zinc-800 rounded-full mb-1 flex justify-center items-center">
+                                   <span class="w-1 h-3 bg-zinc-500 rounded-full block animate-pulse"></span>
+                               </div>
+                               <span class="text-[7px] font-bold tracking-widest text-zinc-400 font-mono">CLIPPER</span>
+                               <div class="w-2.5 h-1 bg-zinc-950 rounded-full mt-1 border-t border-zinc-600/30"></div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="mt-8 text-center bg-zinc-950/50 px-4 py-2 rounded-2xl border border-zinc-800/80 z-20">
+                   <p class="text-xs text-zinc-400"><i class="fa-solid fa-arrows-left-right mr-1.5"></i> Görselleştirmeyi canlandırmak için renkleri değiştirin.</p>
+               </div>
+           </div>
+       </div>
+
+       <div class="lg:col-span-7 space-y-8 bg-zinc-900/10 lg:p-4 rounded-3xl">
+           <div>
+               <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/5 text-zinc-300 border border-white/10">
+                   <i class="fa-solid fa-wand-magic-sparkles mr-2 text-amber-500"></i> AI Destekli Tasarım Atölyesi
+               </span>
+               <h1 class="text-4xl sm:text-5xl font-black mt-3 tracking-tight text-white leading-tight">Premium <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-zinc-100 to-white">RetractCase™ Tasarla</span></h1>
+               <p class="text-zinc-400 mt-4 text-sm leading-relaxed">Sıradan plastik aparatları unutun. Fotoğraflarda gördüğünüz o ultra gerçekçi, mat silikon gövdeli, krom kaplama makaralı ve bombeli jel amblemli ürünü şimdi kendi zevkinize göre özelleştirin.</p>
+           </div>
+
+           <div class="space-y-4 bg-zinc-900/40 p-6 rounded-3xl border border-zinc-800/60">
+               <div class="flex justify-between items-center">
+                   <span class="text-xs font-extrabold tracking-widest text-zinc-500 uppercase">01 / KILIFA SİLİKON RENK SEÇİMİ</span>
+                   <span id="label-color-name" class="text-xs font-bold text-amber-500">Neon Turuncu</span>
+               </div>
+               <div class="grid grid-cols-3 sm:grid-cols-6 gap-3">
+                   <button onclick="updateColor('orange', 'bg-amber-500', 'Neon Turuncu', 'FLAME')" class="group p-3 rounded-2xl bg-zinc-950 border-2 border-amber-500 transition-all duration-300 flex flex-col items-center">
+                       <span class="w-8 h-8 rounded-full bg-amber-500 shadow-lg shadow-amber-500/20"></span>
+                       <span class="text-[10px] mt-2 font-bold text-zinc-400 group-hover:text-white">Turuncu</span>
+                   </button>
+                   <button onclick="updateColor('green', 'bg-lime-500', 'Lime Neon', 'NEON')" class="group p-3 rounded-2xl bg-zinc-950 border-2 border-transparent hover:border-zinc-800 transition-all duration-300 flex flex-col items-center">
+                       <span class="w-8 h-8 rounded-full bg-lime-500 shadow-lg shadow-lime-500/20"></span>
+                       <span class="text-[10px] mt-2 font-bold text-zinc-400 group-hover:text-white">Yeşil</span>
+                   </button>
+                   <button onclick="updateColor('pink', 'bg-fuchsia-600', 'Asi Pembe', 'VIBE')" class="group p-3 rounded-2xl bg-zinc-950 border-2 border-transparent hover:border-zinc-800 transition-all duration-300 flex flex-col items-center">
+                       <span class="w-8 h-8 rounded-full bg-fuchsia-600 shadow-lg shadow-fuchsia-600/20"></span>
+                       <span class="text-[10px] mt-2 font-bold text-zinc-400 group-hover:text-white">Pembe</span>
+                   </button>
+                   <button onclick="updateColor('blue', 'bg-cyan-500', 'Buz Mavisi', 'CHILL')" class="group p-3 rounded-2xl bg-zinc-950 border-2 border-transparent hover:border-zinc-800 transition-all duration-300 flex flex-col items-center">
+                       <span class="w-8 h-8 rounded-full bg-cyan-500 shadow-lg shadow-cyan-500/20"></span>
+                       <span class="text-[10px] mt-2 font-bold text-zinc-400 group-hover:text-white">Mavi</span>
+                   </button>
+                   <button onclick="updateColor('dark', 'bg-zinc-800', 'Gece Siyahı', 'DARK')" class="group p-3 rounded-2xl bg-zinc-950 border-2 border-transparent hover:border-zinc-800 transition-all duration-300 flex flex-col items-center">
+                       <span class="w-8 h-8 rounded-full bg-zinc-800 shadow-lg shadow-zinc-800/20"></span>
+                       <span class="text-[10px] mt-2 font-bold text-zinc-400 group-hover:text-white">Siyah</span>
+                   </button>
+                   <button onclick="updateColor('white', 'bg-zinc-100', 'Mat Beyaz', 'PURE')" class="group p-3 rounded-2xl bg-zinc-950 border-2 border-transparent hover:border-zinc-800 transition-all duration-300 flex flex-col items-center">
+                       <span class="w-8 h-8 rounded-full bg-zinc-100 shadow-lg shadow-zinc-100/20"></span>
+                       <span class="text-[10px] mt-2 font-bold text-zinc-400 group-hover:text-white">Beyaz</span>
+                   </button>
+               </div>
+           </div>
+
+           <div class="space-y-4 bg-zinc-900/40 p-6 rounded-3xl border border-zinc-800/60">
+               <div class="flex justify-between items-center">
+                   <span class="text-xs font-extrabold tracking-widest text-zinc-500 uppercase">02 / GÖVDE KAPLAMA DESENİ</span>
+                   <span id="label-texture-name" class="text-xs font-bold text-amber-500">Düz Premium Mat</span>
+               </div>
+               <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                   <button onclick="updateTexture('none', 'Düz Premium Mat')" class="p-4 rounded-2xl bg-zinc-950 border-2 border-amber-500 text-left transition-all duration-300">
+                       <span class="text-xs font-bold text-white block">Sade Mat</span>
+                       <span class="text-[9px] text-zinc-500">Pürüzsüz Premium</span>
+                   </button>
+                   <button onclick="updateTexture('splash', 'Sokak Sanatı Splash')" class="p-4 rounded-2xl bg-zinc-950 border-2 border-transparent hover:border-zinc-800 text-left transition-all duration-300">
+                       <span class="text-xs font-bold text-white block">Splash Doku</span>
+                       <span class="text-[9px] text-zinc-500">Boyalı Sokak Modası</span>
+                   </button>
+                   <button onclick="updateTexture('marble', 'Mermer Damar')" class="p-4 rounded-2xl bg-zinc-950 border-2 border-transparent hover:border-zinc-800 text-left transition-all duration-300">
+                       <span class="text-xs font-bold text-white block">Lüks Mermer</span>
+                       <span class="text-[9px] text-zinc-500">Damarlı Özel Doku</span>
+                   </button>
+                   <button onclick="updateTexture('carbon', 'Karbon Fiber')" class="p-4 rounded-2xl bg-zinc-950 border-2 border-transparent hover:border-zinc-800 text-left transition-all duration-300">
+                       <span class="text-xs font-bold text-white block">Karbon Fiber</span>
+                       <span class="text-[9px] text-zinc-500">Yarışçı Dokusu</span>
+                   </button>
+               </div>
+           </div>
+
+           <div class="space-y-4 bg-zinc-900/40 p-6 rounded-3xl border border-zinc-800/60">
+               <div class="flex justify-between items-center">
+                   <span class="text-xs font-extrabold tracking-widest text-zinc-500 uppercase">03 / AMBLEM TASARIMI</span>
+                   <span class="text-[10px] bg-amber-500/10 text-amber-400 font-bold px-2 py-0.5 rounded-full">Yapay Zeka Destekli</span>
+               </div>
+               <div class="space-y-2">
+                   <label class="text-xs font-semibold text-zinc-400">Hazır Premium Koleksiyon:</label>
+                   <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                       <button onclick="updateLogo('https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=300&auto=format&fit=crop&q=80', 'Asi Smiley')" class="p-2.5 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-amber-500 text-left flex items-center space-x-2 transition">
+                           <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=80&auto=format&fit=crop&q=80" alt="sm" class="w-7 h-7 rounded-full object-cover">
+                           <span class="text-[10px] font-bold">Asi Smiley</span>
+                       </button>
+                       <button onclick="updateLogo('https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=300&auto=format&fit=crop&q=80', 'Futbol Splash')" class="p-2.5 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-amber-500 text-left flex items-center space-x-2 transition">
+                           <img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=80&auto=format&fit=crop&q=80" alt="soc" class="w-7 h-7 rounded-full object-cover">
+                           <span class="text-[10px] font-bold">Futbol Splash</span>
+                       </button>
+                       <button onclick="updateLogo('https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?w=300&auto=format&fit=crop&q=80', 'Neon Soyut')" class="p-2.5 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-amber-500 text-left flex items-center space-x-2 transition">
+                           <img src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?w=80&auto=format&fit=crop&q=80" alt="neon" class="w-7 h-7 rounded-full object-cover">
+                           <span class="text-[10px] font-bold">Neon Soyut</span>
+                       </button>
+                       <button onclick="updateLogo('https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=300&auto=format&fit=crop&q=80', 'Japon Dalga')" class="p-2.5 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-amber-500 text-left flex items-center space-x-2 transition">
+                           <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=80&auto=format&fit=crop&q=80" alt="wave" class="w-7 h-7 rounded-full object-cover">
+                           <span class="text-[10px] font-bold">Japon Dalga</span>
+                       </button>
+                   </div>
+               </div>
+               <div class="border-t border-zinc-800/80 my-4 pt-4"></div>
+               <div class="space-y-3">
+                   <div class="flex justify-between items-center">
+                       <label class="text-xs font-bold text-zinc-300 flex items-center gap-1.5"><i class="fa-solid fa-wand-magic-sparkles text-amber-500"></i> Kendi Hayalindeki Amblemi AI ile Üret!</label>
+                       <span class="text-[9px] text-zinc-500">Gemini Imagen 4.0</span>
+                   </div>
+                   <div class="flex gap-2">
+                       <input id="ai-prompt-input" type="text" placeholder="Örn: Mermer üzerine altın kaplama kurt kafası grafiği..." class="flex-grow bg-zinc-950 border border-zinc-800 focus:border-amber-500/80 outline-none rounded-xl px-4 py-3 text-xs text-zinc-200 transition">
+                       <button onclick="generateAiLogo()" class="bg-white hover:bg-zinc-200 text-zinc-950 font-bold px-4 py-3 rounded-xl text-xs flex items-center gap-1.5 transition whitespace-nowrap">
+                           <i class="fa-solid fa-gear" id="ai-btn-icon"></i><span id="ai-btn-text">Görsel Üret</span>
+                       </button>
+                   </div>
+                   <p class="text-[9px] text-zinc-500 leading-normal">Uygulama, yazdığınız ifadeden makara boyutuna uygun ultra gerçekçi, dairesel bombeli bir amblem oluşturarak canlı simülatöre yerleştirecektir.</p>
+               </div>
+           </div>
+
+           <div class="bg-gradient-to-tr from-zinc-900 via-zinc-950 to-zinc-900 border border-zinc-800 p-6 rounded-3xl flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl relative overflow-hidden">
+               <div class="absolute -right-12 -bottom-12 w-32 h-32 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+               <div>
+                   <div class="flex items-center space-x-2">
+                       <span class="text-3xl font-black text-white" id="product-price">199.90 TL</span>
+                       <span class="text-sm line-through text-zinc-500">299.90 TL</span>
+                   </div>
+                   <p class="text-[11px] text-amber-500 font-semibold mt-1"><i class="fa-solid fa-tags"></i> Lansmana özel ücretsiz kargo!</p>
+               </div>
+               <div class="flex items-center gap-3 w-full sm:w-auto z-10">
+                   <div class="flex items-center bg-zinc-950 border border-zinc-800 rounded-xl px-2">
+                       <button onclick="changeQuantity(-1)" class="p-2 hover:text-white text-zinc-500 transition"><i class="fa-solid fa-minus text-xs"></i></button>
+                       <span id="quantity-display" class="px-3 font-bold text-sm">1</span>
+                       <button onclick="changeQuantity(1)" class="p-2 hover:text-white text-zinc-500 transition"><i class="fa-solid fa-plus text-xs"></i></button>
+                   </div>
+                   <button onclick="addToBasket()" class="flex-grow sm:flex-grow-0 bg-white hover:bg-zinc-200 text-zinc-950 font-black px-6 py-4 rounded-xl text-xs transition flex items-center justify-center gap-2">
+                       <i class="fa-solid fa-cart-plus"></i><span>Tasarımla Siparişi Başlat</span>
+                   </button>
+               </div>
+           </div>
+       </div>
+   </main>
+
+   <section class="border-t border-zinc-900 bg-zinc-950/20 py-16" id="how">
+       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div class="text-center max-w-xl mx-auto mb-12">
+               <h2 class="text-3xl font-black text-white">RetractLab Standartları</h2>
+               <p class="text-xs text-zinc-500 mt-2">Neden diğer basit plastik aparatlardan çok daha farklı?</p>
+           </div>
+           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+               <div class="bg-zinc-900/30 border border-zinc-800 p-6 rounded-2xl">
+                   <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-500 flex items-center justify-center mb-4"><i class="fa-solid fa-gear"></i></div>
+                   <h3 class="text-sm font-bold text-white uppercase tracking-wide">60 cm Güçlendirilmiş Makaralı Çelik İp</h3>
+                   <p class="text-zinc-400 text-xs mt-2 leading-relaxed">Kopmayan, sürtünmeye karşı maksimum dayanıklılığa sahip patentli çelik örgü mekanizma sistemi. Her çekişte yumuşak bir geri sarım gücü.</p>
+               </div>
+               <div class="bg-zinc-900/30 border border-zinc-800 p-6 rounded-2xl">
+                   <div class="w-10 h-10 rounded-lg bg-lime-500/10 text-lime-500 flex items-center justify-center mb-4"><i class="fa-solid fa-fire"></i></div>
+                   <h3 class="text-sm font-bold text-white uppercase tracking-wide">Premium Silikon Clipper Haznesi</h3>
+                   <p class="text-zinc-400 text-xs mt-2 leading-relaxed">Çakmağınızı sımsıkı saran ve asla düşmesini engellemeyen, darbelere karşı esnek, premium kadife hissiyatlı mat silikon gövde.</p>
+               </div>
+               <div class="bg-zinc-900/30 border border-zinc-800 p-6 rounded-2xl">
+                   <div class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-500 flex items-center justify-center mb-4"><i class="fa-solid fa-image"></i></div>
+                   <h3 class="text-sm font-bold text-white uppercase tracking-wide">3D Bombeli Akrilik Jel Kaplama</h3>
+                   <p class="text-zinc-400 text-xs mt-2 leading-relaxed">Gönderdiğiniz veya tasarladığınız amblemler solmayan, çizilmeyen ve parlaklık hissini koruyan lüks bombeli jel cam ile preslenmektedir.</p>
+               </div>
+           </div>
+       </div>
+   </section>
+
+   <div id="notification-modal" class="fixed inset-0 bg-black/80 z-[100] flex items-center justify-center px-4 hidden backdrop-blur-md">
+       <div class="bg-zinc-900 border border-zinc-800 w-full max-w-sm rounded-3xl p-6 relative text-center shadow-2xl">
+           <div class="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-4 border border-zinc-800" id="notification-icon-container">
+               <i class="fa-solid fa-circle-info text-2xl text-amber-500" id="notification-icon"></i>
+           </div>
+           <h4 class="text-lg font-bold text-white mb-2" id="notification-title">Bilgilendirme</h4>
+           <p class="text-zinc-400 text-xs leading-relaxed mb-6" id="notification-message">Mesaj detayı</p>
+           <button onclick="closeNotification()" class="w-full bg-white hover:bg-zinc-200 text-zinc-950 font-bold py-3 rounded-xl text-xs transition">Tamam</button>
+       </div>
+   </div>
+
+   <div id="cart-modal" class="fixed inset-0 bg-black/85 z-50 flex items-center justify-center px-4 hidden backdrop-blur-sm">
+       <div class="bg-zinc-900 border border-zinc-800/80 w-full max-w-md rounded-3xl p-6 relative shadow-2xl">
+           <button onclick="closeCart()" class="absolute top-4 right-4 text-zinc-500 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+           <h3 class="text-lg font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-bag-shopping text-amber-500"></i><span>Sipariş Özetiniz</span></h3>
+           <div id="cart-items-container" class="space-y-3 max-h-[250px] overflow-y-auto pr-1"></div>
+           <div class="border-t border-zinc-800 mt-6 pt-4 space-y-4">
+               <div class="flex justify-between items-center">
+                   <span class="text-xs text-zinc-400">Genel Toplam:</span>
+                   <span id="cart-total" class="text-lg font-black text-white">0.00 TL</span>
+               </div>
+               <div class="space-y-2">
+                   <input type="text" id="cust-name" placeholder="Ad Soyad" class="w-full bg-zinc-950 border border-zinc-800 text-xs p-3 rounded-xl outline-none focus:border-amber-500 text-zinc-200">
+                   <input type="text" id="cust-phone" placeholder="Telefon Numarası" class="w-full bg-zinc-950 border border-zinc-800 text-xs p-3 rounded-xl outline-none focus:border-amber-500 text-zinc-200">
+                   <textarea id="cust-address" placeholder="Teslimat Adresi" class="w-full bg-zinc-950 border border-zinc-800 text-xs p-3 rounded-xl outline-none focus:border-amber-500 text-zinc-200 h-16"></textarea>
+               </div>
+               <button onclick="checkoutOrder()" class="w-full bg-white hover:bg-zinc-200 text-zinc-950 font-black py-4 rounded-xl text-xs transition">Siparişi Onayla & Hazırlamaya Gönder</button>
+           </div>
+       </div>
+   </div>
+
+   <div id="toast" class="fixed bottom-6 right-6 bg-white text-zinc-950 font-bold px-6 py-4 rounded-2xl shadow-2xl z-50 flex items-center gap-3 transition-transform duration-300 translate-y-24 opacity-0 pointer-events-none">
+       <i class="fa-solid fa-circle-check text-xl"></i>
+       <div>
+           <p class="text-xs">Tasarımınız Kaydedildi!</p>
+           <p class="text-[10px] text-zinc-500 font-normal">Siparişe hazır hale getirildi.</p>
+       </div>
+   </div>
+
+   <footer class="border-t border-zinc-900 bg-zinc-950 py-8 text-center text-xs text-zinc-600">
+       <p>© 2026 RetractLab Özel Tasarım Atölyesi. Tüm Hakları Saklıdır.</p>
+   </footer>
+
+   <script src="script.js"></script>
+</body>
+</html>
