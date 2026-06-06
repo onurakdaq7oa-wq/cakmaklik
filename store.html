@@ -189,12 +189,24 @@
         .product-image {
             width: 100%;
             height: 300px;
-            background: linear-gradient(135deg, #2a2a2a 0%, #3d3d3d 100%);
+            background: linear-gradient(135deg, #f0f0f0 0%, #ffffff 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 80px;
-            color: #ffd700;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .product-image canvas {
+            width: 100%;
+            height: 100%;
         }
 
         .product-info {
@@ -482,7 +494,9 @@
             <div class="products-grid">
                 <!-- Product 1 -->
                 <div class="product-card">
-                    <div class="product-image">⚫</div>
+                    <div class="product-image">
+                        <canvas id="canvas-1" width="280" height="300"></canvas>
+                    </div>
                     <div class="product-info">
                         <h3>Juventus Gold Edition</h3>
                         <div class="product-rating">★★★★★ (248 reviews)</div>
@@ -494,7 +508,9 @@
 
                 <!-- Product 2 -->
                 <div class="product-card">
-                    <div class="product-image">⚫</div>
+                    <div class="product-image">
+                        <canvas id="canvas-2" width="280" height="300"></canvas>
+                    </div>
                     <div class="product-info">
                         <h3>Barcelona FCB Classic</h3>
                         <div class="product-rating">★★★★★ (312 reviews)</div>
@@ -506,7 +522,9 @@
 
                 <!-- Product 3 -->
                 <div class="product-card">
-                    <div class="product-image">🔵</div>
+                    <div class="product-image">
+                        <canvas id="canvas-3" width="280" height="300"></canvas>
+                    </div>
                     <div class="product-info">
                         <h3>Real Madrid Blue</h3>
                         <div class="product-rating">★★★★★ (289 reviews)</div>
@@ -518,7 +536,9 @@
 
                 <!-- Product 4 -->
                 <div class="product-card">
-                    <div class="product-image">😊</div>
+                    <div class="product-image">
+                        <canvas id="canvas-4" width="280" height="300"></canvas>
+                    </div>
                     <div class="product-info">
                         <h3>Neon Smiley Art</h3>
                         <div class="product-rating">★★★★☆ (156 reviews)</div>
@@ -530,7 +550,9 @@
 
                 <!-- Product 5 -->
                 <div class="product-card">
-                    <div class="product-image">🌈</div>
+                    <div class="product-image">
+                        <canvas id="canvas-5" width="280" height="300"></canvas>
+                    </div>
                     <div class="product-info">
                         <h3>Neon Rainbow Splash</h3>
                         <div class="product-rating">★★★★★ (201 reviews)</div>
@@ -542,7 +564,9 @@
 
                 <!-- Product 6 -->
                 <div class="product-card">
-                    <div class="product-image">⚽</div>
+                    <div class="product-image">
+                        <canvas id="canvas-6" width="280" height="300"></canvas>
+                    </div>
                     <div class="product-info">
                         <h3>Soccer Ball Neon</h3>
                         <div class="product-rating">★★★★★ (267 reviews)</div>
@@ -554,7 +578,9 @@
 
                 <!-- Product 7 -->
                 <div class="product-card">
-                    <div class="product-image">🎨</div>
+                    <div class="product-image">
+                        <canvas id="canvas-7" width="280" height="300"></canvas>
+                    </div>
                     <div class="product-info">
                         <h3>Neon Bear Street Art</h3>
                         <div class="product-rating">★★★★★ (189 reviews)</div>
@@ -566,7 +592,9 @@
 
                 <!-- Product 8 -->
                 <div class="product-card">
-                    <div class="product-image">✨</div>
+                    <div class="product-image">
+                        <canvas id="canvas-8" width="280" height="300"></canvas>
+                    </div>
                     <div class="product-info">
                         <h3>Glitch Neon King</h3>
                         <div class="product-rating">★★★★☆ (143 reviews)</div>
@@ -578,7 +606,9 @@
 
                 <!-- Product 9 -->
                 <div class="product-card">
-                    <div class="product-image">💫</div>
+                    <div class="product-image">
+                        <canvas id="canvas-9" width="280" height="300"></canvas>
+                    </div>
                     <div class="product-info">
                         <h3>Neon Football Energy</h3>
                         <div class="product-rating">★★★★★ (224 reviews)</div>
@@ -590,7 +620,9 @@
 
                 <!-- Product 10 -->
                 <div class="product-card">
-                    <div class="product-image">🟢</div>
+                    <div class="product-image">
+                        <canvas id="canvas-10" width="280" height="300"></canvas>
+                    </div>
                     <div class="product-info">
                         <h3>Neon Glow Multi</h3>
                         <div class="product-rating">★★★★★ (198 reviews)</div>
@@ -602,7 +634,9 @@
 
                 <!-- Product 11 -->
                 <div class="product-card">
-                    <div class="product-image">🟡</div>
+                    <div class="product-image">
+                        <canvas id="canvas-11" width="280" height="300"></canvas>
+                    </div>
                     <div class="product-info">
                         <h3>Barca Fan Yellow Neon</h3>
                         <div class="product-rating">★★★★★ (276 reviews)</div>
@@ -614,7 +648,9 @@
 
                 <!-- Product 12 -->
                 <div class="product-card">
-                    <div class="product-image">🎪</div>
+                    <div class="product-image">
+                        <canvas id="canvas-12" width="280" height="300"></canvas>
+                    </div>
                     <div class="product-info">
                         <h3>Crowded Chaos Neon</h3>
                         <div class="product-rating">★★★★☆ (167 reviews)</div>
@@ -724,6 +760,281 @@
     </footer>
 
     <script>
+        // Function to draw realistic lighter holder on canvas
+        function drawLighterHolder(canvasId, designType) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            const width = canvas.width;
+            const height = canvas.height;
+
+            // Clear canvas
+            ctx.fillStyle = '#f0f0f0';
+            ctx.fillRect(0, 0, width, height);
+
+            // Draw holder body (3D perspective)
+            const holderX = width / 2;
+            const holderY = height / 2;
+            const holderWidth = 80;
+            const holderHeight = 120;
+
+            // Shadow
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.15)';
+            ctx.ellipse(holderX, holderY + 70, holderWidth / 2 + 20, 15, 0, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Draw designs based on type
+            if (designType === 'juventus') {
+                // Black background
+                ctx.fillStyle = '#1a1a1a';
+                ctx.fillRect(holderX - holderWidth / 2, holderY - holderHeight / 2, holderWidth, holderHeight);
+                
+                // Gold stripe
+                ctx.fillStyle = '#ffd700';
+                ctx.fillRect(holderX - holderWidth / 2, holderY - 5, holderWidth, 10);
+                
+                // Gold circle (logo)
+                ctx.fillStyle = '#ffd700';
+                ctx.beginPath();
+                ctx.arc(holderX, holderY, 25, 0, Math.PI * 2);
+                ctx.fill();
+                
+                ctx.fillStyle = '#1a1a1a';
+                ctx.font = 'bold 16px Arial';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText('J', holderX, holderY);
+            } else if (designType === 'barcelona') {
+                // Blue background
+                ctx.fillStyle = '#004d87';
+                ctx.fillRect(holderX - holderWidth / 2, holderY - holderHeight / 2, holderWidth, holderHeight);
+                
+                // Red stripe
+                ctx.fillStyle = '#d42a2a';
+                ctx.fillRect(holderX - holderWidth / 2, holderY - holderHeight / 2, holderWidth, holderHeight / 3);
+                
+                // Gold accents
+                ctx.strokeStyle = '#ffd700';
+                ctx.lineWidth = 3;
+                ctx.strokeRect(holderX - holderWidth / 2 + 5, holderY - holderHeight / 2 + 5, holderWidth - 10, holderHeight - 10);
+            } else if (designType === 'realmadrid') {
+                // Blue background
+                ctx.fillStyle = '#0066cc';
+                ctx.fillRect(holderX - holderWidth / 2, holderY - holderHeight / 2, holderWidth, holderHeight);
+                
+                // White stripe
+                ctx.fillStyle = 'white';
+                ctx.fillRect(holderX - holderWidth / 2, holderY - 8, holderWidth, 16);
+                
+                // Gold circle
+                ctx.fillStyle = '#ffd700';
+                ctx.beginPath();
+                ctx.arc(holderX, holderY, 20, 0, Math.PI * 2);
+                ctx.fill();
+                
+                ctx.fillStyle = '#0066cc';
+                ctx.font = 'bold 12px Arial';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText('RM', holderX, holderY);
+            } else if (designType === 'smiley') {
+                // Gradient background
+                const gradient = ctx.createLinearGradient(holderX - holderWidth / 2, holderY - holderHeight / 2, holderX + holderWidth / 2, holderY + holderHeight / 2);
+                gradient.addColorStop(0, '#ff6b9d');
+                gradient.addColorStop(1, '#ffd700');
+                ctx.fillStyle = gradient;
+                ctx.fillRect(holderX - holderWidth / 2, holderY - holderHeight / 2, holderWidth, holderHeight);
+                
+                // Smiley face
+                ctx.fillStyle = '#000';
+                ctx.beginPath();
+                ctx.arc(holderX - 15, holderY - 10, 5, 0, Math.PI * 2);
+                ctx.fill();
+                
+                ctx.beginPath();
+                ctx.arc(holderX + 15, holderY - 10, 5, 0, Math.PI * 2);
+                ctx.fill();
+                
+                ctx.strokeStyle = '#000';
+                ctx.lineWidth = 3;
+                ctx.beginPath();
+                ctx.arc(holderX, holderY, 25, 0, Math.PI, false);
+                ctx.stroke();
+            } else if (designType === 'rainbow') {
+                // Rainbow gradient
+                const colors = ['#ff0000', '#ff7f00', '#ffff00', '#00ff00', '#0000ff', '#4b0082', '#9400d3'];
+                const stripeHeight = holderHeight / colors.length;
+                
+                colors.forEach((color, index) => {
+                    ctx.fillStyle = color;
+                    ctx.fillRect(holderX - holderWidth / 2, holderY - holderHeight / 2 + index * stripeHeight, holderWidth, stripeHeight);
+                });
+            } else if (designType === 'soccer') {
+                // Purple and blue gradient
+                const gradient = ctx.createLinearGradient(holderX - holderWidth / 2, holderY - holderHeight / 2, holderX + holderWidth / 2, holderY + holderHeight / 2);
+                gradient.addColorStop(0, '#6600cc');
+                gradient.addColorStop(1, '#0066ff');
+                ctx.fillStyle = gradient;
+                ctx.fillRect(holderX - holderWidth / 2, holderY - holderHeight / 2, holderWidth, holderHeight);
+                
+                // Soccer ball
+                ctx.fillStyle = 'white';
+                ctx.beginPath();
+                ctx.arc(holderX, holderY, 20, 0, Math.PI * 2);
+                ctx.fill();
+                
+                ctx.strokeStyle = '#000';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.arc(holderX, holderY, 20, 0, Math.PI * 2);
+                ctx.stroke();
+                
+                // Pentagon pattern
+                ctx.fillStyle = '#000';
+                ctx.beginPath();
+                ctx.moveTo(holderX, holderY - 8);
+                ctx.lineTo(holderX + 7, holderY - 3);
+                ctx.lineTo(holderX + 4, holderY + 8);
+                ctx.lineTo(holderX - 4, holderY + 8);
+                ctx.lineTo(holderX - 7, holderY - 3);
+                ctx.closePath();
+                ctx.fill();
+            } else if (designType === 'bear') {
+                // Dark background with neon effect
+                ctx.fillStyle = '#1a1a1a';
+                ctx.fillRect(holderX - holderWidth / 2, holderY - holderHeight / 2, holderWidth, holderHeight);
+                
+                // Bear character with neon colors
+                ctx.fillStyle = '#00ff00';
+                // Head
+                ctx.beginPath();
+                ctx.arc(holderX, holderY - 15, 18, 0, Math.PI * 2);
+                ctx.fill();
+                
+                // Ears
+                ctx.beginPath();
+                ctx.arc(holderX - 15, holderY - 30, 8, 0, Math.PI * 2);
+                ctx.fill();
+                
+                ctx.beginPath();
+                ctx.arc(holderX + 15, holderY - 30, 8, 0, Math.PI * 2);
+                ctx.fill();
+                
+                // Eyes
+                ctx.fillStyle = '#ff00ff';
+                ctx.beginPath();
+                ctx.arc(holderX - 8, holderY - 18, 4, 0, Math.PI * 2);
+                ctx.fill();
+                
+                ctx.beginPath();
+                ctx.arc(holderX + 8, holderY - 18, 4, 0, Math.PI * 2);
+                ctx.fill();
+            } else if (designType === 'glitch') {
+                // Glitch effect
+                ctx.fillStyle = '#ff00ff';
+                ctx.fillRect(holderX - holderWidth / 2, holderY - holderHeight / 2, holderWidth / 2, holderHeight);
+                
+                ctx.fillStyle = '#00ffff';
+                ctx.fillRect(holderX, holderY - holderHeight / 2, holderWidth / 2, holderHeight);
+                
+                ctx.fillStyle = '#ffff00';
+                ctx.fillRect(holderX - holderWidth / 2 + 10, holderY - 10, holderWidth - 20, 20);
+            } else if (designType === 'football') {
+                // Dynamic color effect
+                const gradient = ctx.createLinearGradient(holderX - holderWidth / 2, holderY - holderHeight / 2, holderX + holderWidth / 2, holderY + holderHeight / 2);
+                gradient.addColorStop(0, '#ff1493');
+                gradient.addColorStop(0.5, '#ffd700');
+                gradient.addColorStop(1, '#00ff00');
+                ctx.fillStyle = gradient;
+                ctx.fillRect(holderX - holderWidth / 2, holderY - holderHeight / 2, holderWidth, holderHeight);
+                
+                // Soccer pattern
+                ctx.strokeStyle = 'rgba(0,0,0,0.3)';
+                ctx.lineWidth = 2;
+                for(let i = 0; i < 3; i++) {
+                    for(let j = 0; j < 3; j++) {
+                        ctx.strokeRect(holderX - 30 + i * 30, holderY - 40 + j * 40, 25, 35);
+                    }
+                }
+            } else if (designType === 'multi') {
+                // Multi-color explosion
+                ctx.fillStyle = '#00ff00';
+                ctx.fillRect(holderX - holderWidth / 2, holderY - holderHeight / 2, holderWidth / 2, holderHeight / 2);
+                
+                ctx.fillStyle = '#ff00ff';
+                ctx.fillRect(holderX, holderY - holderHeight / 2, holderWidth / 2, holderHeight / 2);
+                
+                ctx.fillStyle = '#00ffff';
+                ctx.fillRect(holderX - holderWidth / 2, holderY, holderWidth / 2, holderHeight / 2);
+                
+                ctx.fillStyle = '#ffff00';
+                ctx.fillRect(holderX, holderY, holderWidth / 2, holderHeight / 2);
+            } else if (designType === 'barca-yellow') {
+                // Yellow background
+                ctx.fillStyle = '#ffd700';
+                ctx.fillRect(holderX - holderWidth / 2, holderY - holderHeight / 2, holderWidth, holderHeight);
+                
+                // Blue neon splatter
+                ctx.fillStyle = '#0066ff';
+                ctx.beginPath();
+                ctx.arc(holderX - 20, holderY - 20, 15, 0, Math.PI * 2);
+                ctx.fill();
+                
+                ctx.beginPath();
+                ctx.arc(holderX + 25, holderY + 20, 12, 0, Math.PI * 2);
+                ctx.fill();
+                
+                ctx.fillStyle = '#ff1493';
+                ctx.beginPath();
+                ctx.arc(holderX, holderY, 20, 0, Math.PI * 2);
+                ctx.fill();
+            } else {
+                // Crowded chaos - multiple designs mixed
+                ctx.fillStyle = '#1a1a1a';
+                ctx.fillRect(holderX - holderWidth / 2, holderY - holderHeight / 2, holderWidth, holderHeight);
+                
+                const designColors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+                for(let i = 0; i < 6; i++) {
+                    ctx.fillStyle = designColors[i];
+                    ctx.beginPath();
+                    ctx.arc(
+                        holderX - 30 + (i % 3) * 30,
+                        holderY - 30 + Math.floor(i / 3) * 30,
+                        8,
+                        0,
+                        Math.PI * 2
+                    );
+                    ctx.fill();
+                }
+            }
+
+            // Add metallic shine effect
+            const shineGradient = ctx.createLinearGradient(holderX - holderWidth / 2, holderY - holderHeight / 2, holderX + holderWidth / 4, holderY - holderHeight / 2 + 30);
+            shineGradient.addColorStop(0, 'rgba(255, 255, 255, 0.4)');
+            shineGradient.addColorStop(0.5, 'rgba(255, 255, 255, 0)');
+            ctx.fillStyle = shineGradient;
+            ctx.fillRect(holderX - holderWidth / 2, holderY - holderHeight / 2, holderWidth, 40);
+
+            // Add retraction mechanism details
+            ctx.fillStyle = '#888';
+            ctx.fillRect(holderX - 5, holderY + 55, 10, 8);
+            ctx.fillStyle = '#666';
+            ctx.fillRect(holderX - 3, holderY + 57, 6, 4);
+        }
+
+        // Draw all product images
+        drawLighterHolder('canvas-1', 'juventus');
+        drawLighterHolder('canvas-2', 'barcelona');
+        drawLighterHolder('canvas-3', 'realmadrid');
+        drawLighterHolder('canvas-4', 'smiley');
+        drawLighterHolder('canvas-5', 'rainbow');
+        drawLighterHolder('canvas-6', 'soccer');
+        drawLighterHolder('canvas-7', 'bear');
+        drawLighterHolder('canvas-8', 'glitch');
+        drawLighterHolder('canvas-9', 'football');
+        drawLighterHolder('canvas-10', 'multi');
+        drawLighterHolder('canvas-11', 'barca-yellow');
+        drawLighterHolder('canvas-12', 'chaos');
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
